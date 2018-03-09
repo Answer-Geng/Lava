@@ -1,0 +1,1 @@
+D:\SourceCode\Lava\Lava.QuartzServer\bin\Debug\Lava.QuartzServer.exe.config
