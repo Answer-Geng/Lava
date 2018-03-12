@@ -1,1 +1,15 @@
 D:\SourceCode\Lava\Lava.QuartzServer\bin\Debug\Lava.QuartzServer.exe.config
+D:\SourceCode\Lava\Lava.QuartzServer\bin\Debug\Lava.QuartzServer.exe
+D:\SourceCode\Lava\Lava.QuartzServer\bin\Debug\Lava.QuartzServer.pdb
+D:\SourceCode\Lava\Lava.QuartzServer\bin\Debug\Common.Logging.Core.dll
+D:\SourceCode\Lava\Lava.QuartzServer\bin\Debug\Common.Logging.dll
+D:\SourceCode\Lava\Lava.QuartzServer\bin\Debug\Quartz.dll
+D:\SourceCode\Lava\Lava.QuartzServer\bin\Debug\Common.Logging.pdb
+D:\SourceCode\Lava\Lava.QuartzServer\bin\Debug\Common.Logging.xml
+D:\SourceCode\Lava\Lava.QuartzServer\bin\Debug\Common.Logging.Core.pdb
+D:\SourceCode\Lava\Lava.QuartzServer\bin\Debug\Common.Logging.Core.xml
+D:\SourceCode\Lava\Lava.QuartzServer\bin\Debug\Quartz.pdb
+D:\SourceCode\Lava\Lava.QuartzServer\bin\Debug\Quartz.xml
+D:\SourceCode\Lava\Lava.QuartzServer\obj\Debug\Lava.QuartzServer.exe
+D:\SourceCode\Lava\Lava.QuartzServer\obj\Debug\Lava.QuartzServer.pdb
+D:\SourceCode\Lava\Lava.QuartzServer\obj\Debug\Lava.QuartzServer.csprojResolveAssemblyReference.cache
