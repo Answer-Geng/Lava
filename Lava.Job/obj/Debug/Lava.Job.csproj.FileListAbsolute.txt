@@ -1,0 +1,13 @@
+D:\SourceCode\Lava\Lava.Job\bin\Debug\Lava.Job.dll
+D:\SourceCode\Lava\Lava.Job\bin\Debug\Lava.Job.pdb
+D:\SourceCode\Lava\Lava.Job\bin\Debug\Common.Logging.Core.dll
+D:\SourceCode\Lava\Lava.Job\bin\Debug\Common.Logging.dll
+D:\SourceCode\Lava\Lava.Job\bin\Debug\Quartz.dll
+D:\SourceCode\Lava\Lava.Job\bin\Debug\Common.Logging.pdb
+D:\SourceCode\Lava\Lava.Job\bin\Debug\Common.Logging.xml
+D:\SourceCode\Lava\Lava.Job\bin\Debug\Common.Logging.Core.pdb
+D:\SourceCode\Lava\Lava.Job\bin\Debug\Common.Logging.Core.xml
+D:\SourceCode\Lava\Lava.Job\bin\Debug\Quartz.pdb
+D:\SourceCode\Lava\Lava.Job\bin\Debug\Quartz.xml
+D:\SourceCode\Lava\Lava.Job\obj\Debug\Lava.Job.dll
+D:\SourceCode\Lava\Lava.Job\obj\Debug\Lava.Job.pdb

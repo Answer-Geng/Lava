@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Quartz;
+using Common.Logging;
 
 namespace Lava.Job
 {
-    class JobBase : IJob
+    public class JobBase : IJob
     {
+        private static readonly ILog log = LogManager.GetLogger(typeof(JobBase));
         public void Execute(IJobExecutionContext context)
         {
-            throw new NotImplementedException();
+            log.Info("--------------------Test Job Executing--------------------------");
         }
     }
 }

@@ -67,6 +67,12 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lava.Job\Lava.Job.csproj">
+      <Project>{9546a7e8-1421-4922-a6da-cb1f2892f5f8}</Project>
+      <Name>Lava.Job</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
