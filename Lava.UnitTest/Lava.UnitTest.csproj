@@ -61,11 +61,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="CommonLayer\QuartzCommandTest.cs" />
+    <Compile Include="CommonLayer\QuartzCommandUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\Lava.Job\Lava.Job.csproj">
+      <Project>{9546A7E8-1421-4922-A6DA-CB1F2892F5F8}</Project>
+      <Name>Lava.Job</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Lava.Utility\Lava.Utility.csproj">
       <Project>{7fb5bf21-2c18-4ced-921b-67d0355e8bac}</Project>
       <Name>Lava.Utility</Name>

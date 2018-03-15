@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Quartz.Impl;
+﻿using Quartz.Impl;
 using System.Collections.Specialized;
 using Quartz;
 using Common.Logging;
-using Lava.Job;
 
 namespace Lava.QuartzServer
 {
@@ -44,7 +38,6 @@ namespace Lava.QuartzServer
             log.Info("------- Initialization Complete -----------");
             log.Info("------- Starting Scheduler ---------------");
             sched.Start();
-            log.Info("------- Started Scheduler ----------------");
         }
     }
 }
