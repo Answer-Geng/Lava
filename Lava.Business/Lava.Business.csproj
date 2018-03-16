@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Quartz">
+      <HintPath>..\packages\Quartz.2.3.3\lib\net40\Quartz.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,7 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JobLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lava.MSSQLDB\Lava.MSSQLDB.csproj">
+      <Project>{04f4e3c6-cae2-4198-8d4a-c4f5bf719344}</Project>
+      <Name>Lava.MSSQLDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lava.OracleDB\Lava.OracleDB.csproj">
+      <Project>{88656ab5-4019-48c6-abe3-1ed413f121da}</Project>
+      <Name>Lava.OracleDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lava.Utility\Lava.Utility.csproj">
+      <Project>{7fb5bf21-2c18-4ced-921b-67d0355e8bac}</Project>
+      <Name>Lava.Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

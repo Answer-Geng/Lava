@@ -44,12 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Command\ICommand.cs" />
-    <Compile Include="Command\Invoker.cs" />
     <Compile Include="Command\QuartzAddJobCommand.cs" />
     <Compile Include="Command\QuartzDeleteJobCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Command\QuartzPauseJobCommand.cs" />
     <Compile Include="Command\QuartzResumeJobCommand.cs" />
+    <Compile Include="Provider\RemoteSchedulerProvider.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

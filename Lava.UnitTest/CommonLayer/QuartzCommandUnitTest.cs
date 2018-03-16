@@ -5,34 +5,19 @@ using Lava.Utility.Command;
 using Quartz;
 using Quartz.Impl;
 using Lava.Job;
+using Lava.Utility.Provider;
 
 namespace Lava.UnitTest.CommonLayer
 {
     [TestClass]
     public class QuartzCommandUnitTest
     {
-        private Invoker invoker;
         private JobKey jobKey;
         private IScheduler scheduler;
         public QuartzCommandUnitTest()
         {
-            NameValueCollection properties = new NameValueCollection()
-            {
-                ["quartz.scheduler.instanceName"] = "RemoteClient",
-
-                // set thread pool info
-                ["quartz.threadPool.type"] = "Quartz.Simpl.SimpleThreadPool, Quartz",
-                ["quartz.threadPool.threadCount"] = "5",
-                ["quartz.threadPool.threadPriority"] = "Normal",
-
-                // set remoting exporter
-                ["quartz.scheduler.proxy"] = "true",
-                ["quartz.scheduler.proxy.address"] = "tcp://127.0.0.1:555/QuartzScheduler"
-            };
-
-            var schedulerFactory = new StdSchedulerFactory(properties);
-            scheduler = schedulerFactory.GetScheduler();
-            invoker = new Invoker();
+            RemoteSchedulerProvider rs = new RemoteSchedulerProvider();
+            scheduler = rs.Scheduler;
             jobKey = new JobKey("lava_job_001", "lava_job_group");
         }
 
@@ -40,24 +25,21 @@ namespace Lava.UnitTest.CommonLayer
         public void QuartzPauseJobCommand()
         { 
             QuartzPauseJobCommand pauseCommand = new QuartzPauseJobCommand(scheduler, jobKey);
-            invoker.SetCommand(pauseCommand);
-            invoker.ExecuteCommand();
+            pauseCommand.Execute();
         }
 
         [TestMethod]
         public void QuartzResumeJobCommand()
         {
             QuartzResumeJobCommand resumeCommand = new QuartzResumeJobCommand(scheduler, jobKey);
-            invoker.SetCommand(resumeCommand);
-            invoker.ExecuteCommand();
+            resumeCommand.Execute();
         }
 
         [TestMethod]
         public void QuartzDeleteJobCommand()
         {
             QuartzDeleteJobCommand deleteCommand = new QuartzDeleteJobCommand(scheduler, jobKey);
-            invoker.SetCommand(deleteCommand);
-            invoker.ExecuteCommand();
+            deleteCommand.Execute();
         }
 
         [TestMethod]
@@ -76,8 +58,7 @@ namespace Lava.UnitTest.CommonLayer
                 .Build();
 
             QuartzAddJobCommand addCommand = new QuartzAddJobCommand(scheduler, job, trigger);
-            invoker.SetCommand(addCommand);
-            invoker.ExecuteCommand();
+            addCommand.Execute();
         }
     }
 }
