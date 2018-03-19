@@ -2,3 +2,4 @@ D:\SourceCode\Lava\Lava.MSSQLDB\bin\Debug\Lava.MSSQLDB.dll
 D:\SourceCode\Lava\Lava.MSSQLDB\bin\Debug\Lava.MSSQLDB.pdb
 D:\SourceCode\Lava\Lava.MSSQLDB\obj\Debug\Lava.MSSQLDB.dll
 D:\SourceCode\Lava\Lava.MSSQLDB\obj\Debug\Lava.MSSQLDB.pdb
+D:\SourceCode\Lava\Lava.MSSQLDB\obj\Debug\Lava.MSSQLDB.csprojResolveAssemblyReference.cache

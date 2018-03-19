@@ -1,5 +1,4 @@
 ﻿using Quartz;
-using System;
 
 namespace Lava.Utility.Command
 {

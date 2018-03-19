@@ -1,6 +1,6 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top:10px;
+    padding-bottom: 10px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +21,15 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.lava-brand {
+    font-family: 'Showcard Gothic';
+    font-size: 40px;
+    color: black;
+}
+
+.lava-navbar-right {
+    margin-top: 11px;
+    border: none;
 }

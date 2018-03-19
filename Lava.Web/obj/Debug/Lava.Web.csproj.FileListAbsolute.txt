@@ -51,3 +51,12 @@ D:\SourceCode\Lava\Lava.Web\bin\Newtonsoft.Json.xml
 D:\SourceCode\Lava\Lava.Web\obj\Debug\Lava.Web.csprojResolveAssemblyReference.cache
 D:\SourceCode\Lava\Lava.Web\obj\Debug\Lava.Web.dll
 D:\SourceCode\Lava\Lava.Web\obj\Debug\Lava.Web.pdb
+D:\SourceCode\Lava\Lava.Web\bin\Lava.Business.dll
+D:\SourceCode\Lava\Lava.Web\bin\Lava.ViewModel.dll
+D:\SourceCode\Lava\Lava.Web\bin\Quartz.dll
+D:\SourceCode\Lava\Lava.Web\bin\Lava.Utility.dll
+D:\SourceCode\Lava\Lava.Web\bin\Lava.Business.pdb
+D:\SourceCode\Lava\Lava.Web\bin\Lava.ViewModel.pdb
+D:\SourceCode\Lava\Lava.Web\bin\Quartz.pdb
+D:\SourceCode\Lava\Lava.Web\bin\Quartz.xml
+D:\SourceCode\Lava\Lava.Web\bin\Lava.Utility.pdb

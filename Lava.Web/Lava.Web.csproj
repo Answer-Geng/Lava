@@ -149,6 +149,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JobController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -189,13 +190,11 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\Job\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -209,6 +208,10 @@
     <ProjectReference Include="..\Lava.Business\Lava.Business.csproj">
       <Project>{9392e599-4612-4081-b75e-c61380d5708c}</Project>
       <Name>Lava.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lava.ViewModel\Lava.ViewModel.csproj">
+      <Project>{c79d09e5-88c2-411b-90be-ec5b742175dd}</Project>
+      <Name>Lava.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
