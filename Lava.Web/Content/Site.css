@@ -1,12 +1,25 @@
 ﻿body {
     padding-top:10px;
-    padding-bottom: 10px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    background-color: #eeeeee;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    bottom: 0px;
+}
+
+#body-background{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    background-image:url('../Images/Index.jpg');
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    color:white;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -32,4 +45,29 @@ textarea {
 .lava-navbar-right {
     margin-top: 11px;
     border: none;
+}
+
+.lava-login-panel{
+    width:400px;
+    height:470px;
+    margin-top:50px;
+    margin-right:auto;
+    margin-left:auto;
+    border-radius:10px;
+    background-color: #ffffff;
+    opacity:0.8;
+    text-align:center;
+    padding-top:10px;
+}
+
+.lava-login-panel h1{
+    color:#212121;
+    font-size:1.5em;
+    font-family:'Open Sans';
+    font-weight:700;
+}
+
+.lava-login-panel hr{
+    height:1px;
+    border-top:1px solid #555555;
 }
