@@ -49,18 +49,19 @@ textarea {
 
 .lava-login-panel{
     width:400px;
-    height:470px;
-    margin-top:50px;
+    height:300px;
+    margin-top:100px;
     margin-right:auto;
     margin-left:auto;
     border-radius:10px;
-    background-color: #ffffff;
-    opacity:0.8;
-    text-align:center;
+    background-color:white;
+    opacity:0.9;
     padding-top:10px;
+    position:relative;
 }
 
 .lava-login-panel h1{
+    text-align:center;
     color:#212121;
     font-size:1.5em;
     font-family:'Open Sans';
@@ -70,4 +71,19 @@ textarea {
 .lava-login-panel hr{
     height:1px;
     border-top:1px solid #555555;
+}
+
+.lava-login-panel span{
+    color:black;
+}
+
+.lava-login-panel > .input-group {
+    width:300px;
+    margin:0 auto 10px auto;  
+}
+
+.lava-login-panel > .input-group > button{
+    font-weight:bold;
+    color:white;
+    background-color:#28a745;
 }
