@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4abc3a95a54e4f54a8c719b39d72835d" Name="Diagram1">
+        <EntityTypeShape EntityType="LavaModel.LAVA_BLOB_TRIGGERS" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LavaModel.LAVA_CALENDARS" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LavaModel.LAVA_CRON_TRIGGERS" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LavaModel.LAVA_FIRED_TRIGGERS" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LavaModel.LAVA_JOB_DETAILS" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LavaModel.LAVA_LOCKS" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LavaModel.LAVA_PAUSED_TRIGGER_GRPS" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LavaModel.LAVA_SCHEDULER_STATE" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LavaModel.LAVA_SIMPLE_TRIGGERS" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LavaModel.LAVA_SIMPROP_TRIGGERS" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LavaModel.LAVA_TRIGGERS" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <AssociationConnector Association="LavaModel.FK_LAVA_CRON_TRIGGERS_LAVA_TRIGGERS" ManuallyRouted="false" />
+        <AssociationConnector Association="LavaModel.FK_LAVA_TRIGGERS_LAVA_JOB_DETAILS" ManuallyRouted="false" />
+        <AssociationConnector Association="LavaModel.FK_LAVA_SIMPLE_TRIGGERS_LAVA_TRIGGERS" ManuallyRouted="false" />
+        <AssociationConnector Association="LavaModel.FK_LAVA_SIMPROP_TRIGGERS_LAVA_TRIGGERS" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="LavaModel.LAVA_USER" Width="1.5" PointX="10.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

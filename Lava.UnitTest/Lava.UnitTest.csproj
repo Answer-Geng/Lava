@@ -41,6 +41,12 @@
     <Reference Include="Common.Logging.Core">
       <HintPath>..\packages\Common.Logging.Core.3.0.0\lib\net40\Common.Logging.Core.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Quartz">
       <HintPath>..\packages\Quartz.2.3.3\lib\net40\Quartz.dll</HintPath>
     </Reference>
@@ -62,10 +68,14 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CommonLayer\QuartzCommandUnitTest.cs" />
+    <Compile Include="EntityLayer\EntityFramework.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\Lava.Entity\Lava.Entity.csproj">
+      <Project>{859f402c-8fc1-4c44-89e3-f94f9f769cc2}</Project>
+      <Name>Lava.Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Lava.Job\Lava.Job.csproj">
       <Project>{9546A7E8-1421-4922-A6DA-CB1F2892F5F8}</Project>
       <Name>Lava.Job</Name>

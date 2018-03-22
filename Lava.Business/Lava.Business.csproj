@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="JobLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserLogic.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Lava.MSSQLDB\Lava.MSSQLDB.csproj">
@@ -58,6 +59,10 @@
     <ProjectReference Include="..\Lava.Utility\Lava.Utility.csproj">
       <Project>{7fb5bf21-2c18-4ced-921b-67d0355e8bac}</Project>
       <Name>Lava.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lava.ViewModel\Lava.ViewModel.csproj">
+      <Project>{C79D09E5-88C2-411B-90BE-EC5B742175DD}</Project>
+      <Name>Lava.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,11 @@
+D:\SourceCode\Lava\Lava.Entity\bin\Debug\Lava.Entity.dll
+D:\SourceCode\Lava\Lava.Entity\bin\Debug\Lava.Entity.pdb
+D:\SourceCode\Lava\Lava.Entity\obj\Debug\Lava.Entity.dll
+D:\SourceCode\Lava\Lava.Entity\obj\Debug\Lava.Entity.pdb
+D:\SourceCode\Lava\Lava.Entity\bin\Debug\Lava.Entity.dll.config
+D:\SourceCode\Lava\Lava.Entity\bin\Debug\EntityFramework.dll
+D:\SourceCode\Lava\Lava.Entity\bin\Debug\EntityFramework.SqlServer.dll
+D:\SourceCode\Lava\Lava.Entity\bin\Debug\EntityFramework.xml
+D:\SourceCode\Lava\Lava.Entity\bin\Debug\EntityFramework.SqlServer.xml
+D:\SourceCode\Lava\Lava.Entity\obj\Debug\Lava.Entity.csprojResolveAssemblyReference.cache
+D:\SourceCode\Lava\Lava.Entity\bin\Debug\App.Config

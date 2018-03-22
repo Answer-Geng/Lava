@@ -12,3 +12,5 @@ D:\SourceCode\Lava\Lava.Business\bin\Debug\Lava.OracleDB.pdb
 D:\SourceCode\Lava\Lava.Business\bin\Debug\Lava.Utility.pdb
 D:\SourceCode\Lava\Lava.Business\bin\Debug\Quartz.pdb
 D:\SourceCode\Lava\Lava.Business\bin\Debug\Quartz.xml
+D:\SourceCode\Lava\Lava.Business\bin\Debug\Lava.ViewModel.dll
+D:\SourceCode\Lava\Lava.Business\bin\Debug\Lava.ViewModel.pdb

@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<div id="body-background">
+    <div class="col-md-5">
+        <h1 class="text-right">LAVA</h1>
+        <p class="lead text-right">is a free web framework<br />for building task scheduling system<br />basing on Quartz.Net</p>
+    </div>
+
+    <div class="col-md-7">
+        @Html.BeginForm("Login", "Home", FormMethod.Post, new { @class = "lava-login-panel" })
+        {
+        <h1>SIGN IN</h1>
+        <hr />
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+            <input type="text" class="form-control" name="username" placeholder="Username" autofocus>
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+            <input type="password" class="form-control" name="password" placeholder="Password">
+        </div>
+
+        <div class="input-group">
+            <button type="submit" class="btn btn-block">Sign In</button>
+        </div>
+
+        <div class="input-group">
+            <a href="#">Forgot password?</a>
+            <div class="pull-right">
+                <a href="#">Sign up</a><span> for Lava</span>
+            </div>
+        </div>
+        }
+    </div>
+</div>
+

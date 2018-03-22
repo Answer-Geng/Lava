@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LavaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="LAVA_BLOB_TRIGGERS">
+    <Key>
+      <PropertyRef Name="SCHED_NAME" />
+      <PropertyRef Name="TRIGGER_NAME" />
+      <PropertyRef Name="TRIGGER_GROUP" />
+    </Key>
+    <Property Name="SCHED_NAME" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TRIGGER_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TRIGGER_GROUP" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BLOB_DATA" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="LAVA_CALENDARS">
+    <Key>
+      <PropertyRef Name="SCHED_NAME" />
+      <PropertyRef Name="CALENDAR_NAME" />
+    </Key>
+    <Property Name="SCHED_NAME" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CALENDAR_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CALENDAR" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LAVA_CRON_TRIGGERS">
+    <Key>
+      <PropertyRef Name="SCHED_NAME" />
+      <PropertyRef Name="TRIGGER_NAME" />
+      <PropertyRef Name="TRIGGER_GROUP" />
+    </Key>
+    <Property Name="SCHED_NAME" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TRIGGER_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TRIGGER_GROUP" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CRON_EXPRESSION" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TIME_ZONE_ID" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="LAVA_TRIGGERS" Relationship="Self.FK_LAVA_CRON_TRIGGERS_LAVA_TRIGGERS" FromRole="LAVA_CRON_TRIGGERS" ToRole="LAVA_TRIGGERS" />
+  </EntityType>
+  <EntityType Name="LAVA_FIRED_TRIGGERS">
+    <Key>
+      <PropertyRef Name="SCHED_NAME" />
+      <PropertyRef Name="ENTRY_ID" />
+    </Key>
+    <Property Name="SCHED_NAME" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ENTRY_ID" Type="String" MaxLength="140" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TRIGGER_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TRIGGER_GROUP" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="INSTANCE_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FIRED_TIME" Type="Int64" Nullable="false" />
+    <Property Name="SCHED_TIME" Type="Int64" Nullable="false" />
+    <Property Name="PRIORITY" Type="Int32" Nullable="false" />
+    <Property Name="STATE" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="JOB_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="JOB_GROUP" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="IS_NONCONCURRENT" Type="Boolean" />
+    <Property Name="REQUESTS_RECOVERY" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="LAVA_JOB_DETAILS">
+    <Key>
+      <PropertyRef Name="SCHED_NAME" />
+      <PropertyRef Name="JOB_NAME" />
+      <PropertyRef Name="JOB_GROUP" />
+    </Key>
+    <Property Name="SCHED_NAME" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="JOB_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="JOB_GROUP" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="JOB_CLASS_NAME" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IS_DURABLE" Type="Boolean" Nullable="false" />
+    <Property Name="IS_NONCONCURRENT" Type="Boolean" Nullable="false" />
+    <Property Name="IS_UPDATE_DATA" Type="Boolean" Nullable="false" />
+    <Property Name="REQUESTS_RECOVERY" Type="Boolean" Nullable="false" />
+    <Property Name="JOB_DATA" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="LAVA_TRIGGERS" Relationship="Self.FK_LAVA_TRIGGERS_LAVA_JOB_DETAILS" FromRole="LAVA_JOB_DETAILS" ToRole="LAVA_TRIGGERS" />
+  </EntityType>
+  <EntityType Name="LAVA_LOCKS">
+    <Key>
+      <PropertyRef Name="SCHED_NAME" />
+      <PropertyRef Name="LOCK_NAME" />
+    </Key>
+    <Property Name="SCHED_NAME" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LOCK_NAME" Type="String" MaxLength="40" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LAVA_PAUSED_TRIGGER_GRPS">
+    <Key>
+      <PropertyRef Name="SCHED_NAME" />
+      <PropertyRef Name="TRIGGER_GROUP" />
+    </Key>
+    <Property Name="SCHED_NAME" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TRIGGER_GROUP" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LAVA_SCHEDULER_STATE">
+    <Key>
+      <PropertyRef Name="SCHED_NAME" />
+      <PropertyRef Name="INSTANCE_NAME" />
+    </Key>
+    <Property Name="SCHED_NAME" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="INSTANCE_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LAST_CHECKIN_TIME" Type="Int64" Nullable="false" />
+    <Property Name="CHECKIN_INTERVAL" Type="Int64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LAVA_SIMPLE_TRIGGERS">
+    <Key>
+      <PropertyRef Name="SCHED_NAME" />
+      <PropertyRef Name="TRIGGER_NAME" />
+      <PropertyRef Name="TRIGGER_GROUP" />
+    </Key>
+    <Property Name="SCHED_NAME" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TRIGGER_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TRIGGER_GROUP" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="REPEAT_COUNT" Type="Int32" Nullable="false" />
+    <Property Name="REPEAT_INTERVAL" Type="Int64" Nullable="false" />
+    <Property Name="TIMES_TRIGGERED" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="LAVA_TRIGGERS" Relationship="Self.FK_LAVA_SIMPLE_TRIGGERS_LAVA_TRIGGERS" FromRole="LAVA_SIMPLE_TRIGGERS" ToRole="LAVA_TRIGGERS" />
+  </EntityType>
+  <EntityType Name="LAVA_SIMPROP_TRIGGERS">
+    <Key>
+      <PropertyRef Name="SCHED_NAME" />
+      <PropertyRef Name="TRIGGER_NAME" />
+      <PropertyRef Name="TRIGGER_GROUP" />
+    </Key>
+    <Property Name="SCHED_NAME" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TRIGGER_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TRIGGER_GROUP" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="STR_PROP_1" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="STR_PROP_2" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="STR_PROP_3" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="INT_PROP_1" Type="Int32" />
+    <Property Name="INT_PROP_2" Type="Int32" />
+    <Property Name="LONG_PROP_1" Type="Int64" />
+    <Property Name="LONG_PROP_2" Type="Int64" />
+    <Property Name="DEC_PROP_1" Type="Decimal" Precision="13" Scale="4" />
+    <Property Name="DEC_PROP_2" Type="Decimal" Precision="13" Scale="4" />
+    <Property Name="BOOL_PROP_1" Type="Boolean" />
+    <Property Name="BOOL_PROP_2" Type="Boolean" />
+    <Property Name="TIME_ZONE_ID" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="LAVA_TRIGGERS" Relationship="Self.FK_LAVA_SIMPROP_TRIGGERS_LAVA_TRIGGERS" FromRole="LAVA_SIMPROP_TRIGGERS" ToRole="LAVA_TRIGGERS" />
+  </EntityType>
+  <EntityType Name="LAVA_TRIGGERS">
+    <Key>
+      <PropertyRef Name="SCHED_NAME" />
+      <PropertyRef Name="TRIGGER_NAME" />
+      <PropertyRef Name="TRIGGER_GROUP" />
+    </Key>
+    <Property Name="SCHED_NAME" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TRIGGER_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TRIGGER_GROUP" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="JOB_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="JOB_GROUP" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="NEXT_FIRE_TIME" Type="Int64" />
+    <Property Name="PREV_FIRE_TIME" Type="Int64" />
+    <Property Name="PRIORITY" Type="Int32" />
+    <Property Name="TRIGGER_STATE" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TRIGGER_TYPE" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="START_TIME" Type="Int64" Nullable="false" />
+    <Property Name="END_TIME" Type="Int64" />
+    <Property Name="CALENDAR_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="MISFIRE_INSTR" Type="Int32" />
+    <Property Name="JOB_DATA" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="LAVA_CRON_TRIGGERS" Relationship="Self.FK_LAVA_CRON_TRIGGERS_LAVA_TRIGGERS" FromRole="LAVA_TRIGGERS" ToRole="LAVA_CRON_TRIGGERS" />
+    <NavigationProperty Name="LAVA_JOB_DETAILS" Relationship="Self.FK_LAVA_TRIGGERS_LAVA_JOB_DETAILS" FromRole="LAVA_TRIGGERS" ToRole="LAVA_JOB_DETAILS" />
+    <NavigationProperty Name="LAVA_SIMPLE_TRIGGERS" Relationship="Self.FK_LAVA_SIMPLE_TRIGGERS_LAVA_TRIGGERS" FromRole="LAVA_TRIGGERS" ToRole="LAVA_SIMPLE_TRIGGERS" />
+    <NavigationProperty Name="LAVA_SIMPROP_TRIGGERS" Relationship="Self.FK_LAVA_SIMPROP_TRIGGERS_LAVA_TRIGGERS" FromRole="LAVA_TRIGGERS" ToRole="LAVA_SIMPROP_TRIGGERS" />
+  </EntityType>
+  <Association Name="FK_LAVA_CRON_TRIGGERS_LAVA_TRIGGERS">
+    <End Role="LAVA_TRIGGERS" Type="Self.LAVA_TRIGGERS" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="LAVA_CRON_TRIGGERS" Type="Self.LAVA_CRON_TRIGGERS" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="LAVA_TRIGGERS">
+        <PropertyRef Name="SCHED_NAME" />
+        <PropertyRef Name="TRIGGER_NAME" />
+        <PropertyRef Name="TRIGGER_GROUP" />
+      </Principal>
+      <Dependent Role="LAVA_CRON_TRIGGERS">
+        <PropertyRef Name="SCHED_NAME" />
+        <PropertyRef Name="TRIGGER_NAME" />
+        <PropertyRef Name="TRIGGER_GROUP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LAVA_TRIGGERS_LAVA_JOB_DETAILS">
+    <End Role="LAVA_JOB_DETAILS" Type="Self.LAVA_JOB_DETAILS" Multiplicity="1" />
+    <End Role="LAVA_TRIGGERS" Type="Self.LAVA_TRIGGERS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LAVA_JOB_DETAILS">
+        <PropertyRef Name="SCHED_NAME" />
+        <PropertyRef Name="JOB_NAME" />
+        <PropertyRef Name="JOB_GROUP" />
+      </Principal>
+      <Dependent Role="LAVA_TRIGGERS">
+        <PropertyRef Name="SCHED_NAME" />
+        <PropertyRef Name="JOB_NAME" />
+        <PropertyRef Name="JOB_GROUP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LAVA_SIMPLE_TRIGGERS_LAVA_TRIGGERS">
+    <End Role="LAVA_TRIGGERS" Type="Self.LAVA_TRIGGERS" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="LAVA_SIMPLE_TRIGGERS" Type="Self.LAVA_SIMPLE_TRIGGERS" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="LAVA_TRIGGERS">
+        <PropertyRef Name="SCHED_NAME" />
+        <PropertyRef Name="TRIGGER_NAME" />
+        <PropertyRef Name="TRIGGER_GROUP" />
+      </Principal>
+      <Dependent Role="LAVA_SIMPLE_TRIGGERS">
+        <PropertyRef Name="SCHED_NAME" />
+        <PropertyRef Name="TRIGGER_NAME" />
+        <PropertyRef Name="TRIGGER_GROUP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LAVA_SIMPROP_TRIGGERS_LAVA_TRIGGERS">
+    <End Role="LAVA_TRIGGERS" Type="Self.LAVA_TRIGGERS" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="LAVA_SIMPROP_TRIGGERS" Type="Self.LAVA_SIMPROP_TRIGGERS" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="LAVA_TRIGGERS">
+        <PropertyRef Name="SCHED_NAME" />
+        <PropertyRef Name="TRIGGER_NAME" />
+        <PropertyRef Name="TRIGGER_GROUP" />
+      </Principal>
+      <Dependent Role="LAVA_SIMPROP_TRIGGERS">
+        <PropertyRef Name="SCHED_NAME" />
+        <PropertyRef Name="TRIGGER_NAME" />
+        <PropertyRef Name="TRIGGER_GROUP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LavaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="LAVA_BLOB_TRIGGERS" EntityType="Self.LAVA_BLOB_TRIGGERS" />
+    <EntitySet Name="LAVA_CALENDARS" EntityType="Self.LAVA_CALENDARS" />
+    <EntitySet Name="LAVA_CRON_TRIGGERS" EntityType="Self.LAVA_CRON_TRIGGERS" />
+    <EntitySet Name="LAVA_FIRED_TRIGGERS" EntityType="Self.LAVA_FIRED_TRIGGERS" />
+    <EntitySet Name="LAVA_JOB_DETAILS" EntityType="Self.LAVA_JOB_DETAILS" />
+    <EntitySet Name="LAVA_LOCKS" EntityType="Self.LAVA_LOCKS" />
+    <EntitySet Name="LAVA_PAUSED_TRIGGER_GRPS" EntityType="Self.LAVA_PAUSED_TRIGGER_GRPS" />
+    <EntitySet Name="LAVA_SCHEDULER_STATE" EntityType="Self.LAVA_SCHEDULER_STATE" />
+    <EntitySet Name="LAVA_SIMPLE_TRIGGERS" EntityType="Self.LAVA_SIMPLE_TRIGGERS" />
+    <EntitySet Name="LAVA_SIMPROP_TRIGGERS" EntityType="Self.LAVA_SIMPROP_TRIGGERS" />
+    <EntitySet Name="LAVA_TRIGGERS" EntityType="Self.LAVA_TRIGGERS" />
+    <AssociationSet Name="FK_LAVA_CRON_TRIGGERS_LAVA_TRIGGERS" Association="Self.FK_LAVA_CRON_TRIGGERS_LAVA_TRIGGERS">
+      <End Role="LAVA_TRIGGERS" EntitySet="LAVA_TRIGGERS" />
+      <End Role="LAVA_CRON_TRIGGERS" EntitySet="LAVA_CRON_TRIGGERS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LAVA_TRIGGERS_LAVA_JOB_DETAILS" Association="Self.FK_LAVA_TRIGGERS_LAVA_JOB_DETAILS">
+      <End Role="LAVA_JOB_DETAILS" EntitySet="LAVA_JOB_DETAILS" />
+      <End Role="LAVA_TRIGGERS" EntitySet="LAVA_TRIGGERS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LAVA_SIMPLE_TRIGGERS_LAVA_TRIGGERS" Association="Self.FK_LAVA_SIMPLE_TRIGGERS_LAVA_TRIGGERS">
+      <End Role="LAVA_TRIGGERS" EntitySet="LAVA_TRIGGERS" />
+      <End Role="LAVA_SIMPLE_TRIGGERS" EntitySet="LAVA_SIMPLE_TRIGGERS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LAVA_SIMPROP_TRIGGERS_LAVA_TRIGGERS" Association="Self.FK_LAVA_SIMPROP_TRIGGERS_LAVA_TRIGGERS">
+      <End Role="LAVA_TRIGGERS" EntitySet="LAVA_TRIGGERS" />
+      <End Role="LAVA_SIMPROP_TRIGGERS" EntitySet="LAVA_SIMPROP_TRIGGERS" />
+    </AssociationSet>
+    <EntitySet Name="LAVA_USER" EntityType="LavaModel.LAVA_USER" />
+  </EntityContainer>
+  <EntityType Name="LAVA_USER">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="USERNAME" />
+      <PropertyRef Name="PASSWORD" />
+      <PropertyRef Name="CREATEDATE" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERNAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PASSWORD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CREATEDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DESCRIPTION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EMAILADDRESS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>
