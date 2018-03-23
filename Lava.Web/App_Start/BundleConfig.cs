@@ -23,6 +23,11 @@ namespace Lava.Web
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/jquery-ajax").Include(
+                "~/Scripts/jquery-{version}.js",
+                "~/Scripts/jquery.unobtrusive-ajax.js"
+                ));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));

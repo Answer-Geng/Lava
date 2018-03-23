@@ -14,7 +14,6 @@ namespace Lava.UnitTest.EntityLayer
             var context = new LavaEntities();
             var users = context.LAVA_USER.Where(u => u.USERNAME == "Admin").ToList();
             Assert.AreEqual(1, users.Count());
-           
         }
     }
 }

@@ -43,11 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseLogic.cs" />
     <Compile Include="JobLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserLogic.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Lava.Entity\Lava.Entity.csproj">
+      <Project>{859f402c-8fc1-4c44-89e3-f94f9f769cc2}</Project>
+      <Name>Lava.Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Lava.MSSQLDB\Lava.MSSQLDB.csproj">
       <Project>{04f4e3c6-cae2-4198-8d4a-c4f5bf719344}</Project>
       <Name>Lava.MSSQLDB</Name>

@@ -3,3 +3,12 @@ D:\SourceCode\Lava\Lava.MSSQLDB\bin\Debug\Lava.MSSQLDB.pdb
 D:\SourceCode\Lava\Lava.MSSQLDB\obj\Debug\Lava.MSSQLDB.dll
 D:\SourceCode\Lava\Lava.MSSQLDB\obj\Debug\Lava.MSSQLDB.pdb
 D:\SourceCode\Lava\Lava.MSSQLDB\obj\Debug\Lava.MSSQLDB.csprojResolveAssemblyReference.cache
+D:\SourceCode\Lava\Lava.MSSQLDB\bin\Debug\App.Config
+D:\SourceCode\Lava\Lava.MSSQLDB\bin\Debug\EntityFramework.dll
+D:\SourceCode\Lava\Lava.MSSQLDB\bin\Debug\EntityFramework.SqlServer.dll
+D:\SourceCode\Lava\Lava.MSSQLDB\bin\Debug\Lava.Entity.dll
+D:\SourceCode\Lava\Lava.MSSQLDB\bin\Debug\Lava.ViewModel.dll
+D:\SourceCode\Lava\Lava.MSSQLDB\bin\Debug\Lava.Entity.pdb
+D:\SourceCode\Lava\Lava.MSSQLDB\bin\Debug\Lava.ViewModel.pdb
+D:\SourceCode\Lava\Lava.MSSQLDB\bin\Debug\EntityFramework.xml
+D:\SourceCode\Lava\Lava.MSSQLDB\bin\Debug\EntityFramework.SqlServer.xml

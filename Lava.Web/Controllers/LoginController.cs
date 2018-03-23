@@ -1,14 +1,12 @@
-﻿using Lava.ViewModel.Login;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Lava.Business;
+using Lava.ViewModel.Login;
 using System.Web.Mvc;
 
 namespace Lava.Web.Controllers
 {
     public class LoginController : Controller
     {
+        UserLogic userLogic = new UserLogic();
         // GET: Login
         public ActionResult Index()
         {
@@ -16,10 +14,14 @@ namespace Lava.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(UserLoginInput user)
+        public ActionResult Login(UserLoginInput userInput)
         {
-
-            return View();
+            if (!userLogic.IsValid(userInput))
+            {
+                return Content("Login Failed! Incorrect username or password.");
+            }
+            Session["user"] = userInput.UserName;
+            return Content("Y");
         }
     }
 }

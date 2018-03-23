@@ -14,3 +14,8 @@ D:\SourceCode\Lava\Lava.Business\bin\Debug\Quartz.pdb
 D:\SourceCode\Lava\Lava.Business\bin\Debug\Quartz.xml
 D:\SourceCode\Lava\Lava.Business\bin\Debug\Lava.ViewModel.dll
 D:\SourceCode\Lava\Lava.Business\bin\Debug\Lava.ViewModel.pdb
+D:\SourceCode\Lava\Lava.Business\bin\Debug\App.Config
+D:\SourceCode\Lava\Lava.Business\bin\Debug\Lava.Entity.dll
+D:\SourceCode\Lava\Lava.Business\bin\Debug\EntityFramework.dll
+D:\SourceCode\Lava\Lava.Business\bin\Debug\Lava.Entity.pdb
+D:\SourceCode\Lava\Lava.Business\bin\Debug\EntityFramework.xml

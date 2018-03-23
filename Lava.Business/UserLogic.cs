@@ -1,4 +1,5 @@
-﻿using Lava.ViewModel.Login;
+﻿using Lava.MSSQLDB;
+using Lava.ViewModel.Login;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,10 @@ namespace Lava.Business
 {
     public class UserLogic
     {
-        public bool IsValid(UserLoginInput user)
+        private UserDao userDao = new UserDao();
+        public bool IsValid(UserLoginInput userInput)
         {
-
-            return true;
+            return userDao.GetUser(userInput).Count > 0 ? true : false;
         }
     }
 }

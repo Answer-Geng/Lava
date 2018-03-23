@@ -1,13 +1,15 @@
-﻿using System;
+﻿using Lava.Entity;
+using Lava.ViewModel.Login;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lava.MSSQLDB
 {
-    public class UserDao
+    public class UserDao : BaseDao
     {
-
+        public List<LAVA_USER> GetUser(UserLoginInput userInput)
+        {
+            return db.LAVA_USER.Where(u => u.USERNAME == userInput.UserName && u.PASSWORD == userInput.Password).ToList();
+        }
     }
 }
