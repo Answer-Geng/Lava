@@ -12,7 +12,7 @@ namespace Lava.Entity
     using System;
     using System.Collections.Generic;
     
-    public partial class LAVA_USER
+    public partial class LAVA_USERS
     {
         public int ID { get; set; }
         public string USERNAME { get; set; }

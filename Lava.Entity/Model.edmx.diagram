@@ -20,7 +20,7 @@
         <AssociationConnector Association="LavaModel.FK_LAVA_TRIGGERS_LAVA_JOB_DETAILS" ManuallyRouted="false" />
         <AssociationConnector Association="LavaModel.FK_LAVA_SIMPLE_TRIGGERS_LAVA_TRIGGERS" ManuallyRouted="false" />
         <AssociationConnector Association="LavaModel.FK_LAVA_SIMPROP_TRIGGERS_LAVA_TRIGGERS" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="LavaModel.LAVA_USER" Width="1.5" PointX="10.375" PointY="3.75" />
+        <EntityTypeShape EntityType="LavaModel.LAVA_USERS" Width="1.5" PointX="10.375" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

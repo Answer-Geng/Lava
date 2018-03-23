@@ -153,8 +153,8 @@
     <Property Name="JOB_DATA" Type="varbinary(max)" />
   </EntityType>
   <!--Errors Found During Generation:
-warning 6002: The table/view 'Lava.dbo.LAVA_USER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="LAVA_USER">
+warning 6002: The table/view 'Lava.dbo.LAVA_USERS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LAVA_USERS">
     <Key>
       <PropertyRef Name="ID" />
       <PropertyRef Name="USERNAME" />
@@ -250,15 +250,15 @@ warning 6002: The table/view 'Lava.dbo.LAVA_USER' does not have a primary key de
     <EntitySet Name="LAVA_SIMPLE_TRIGGERS" EntityType="Self.LAVA_SIMPLE_TRIGGERS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LAVA_SIMPROP_TRIGGERS" EntityType="Self.LAVA_SIMPROP_TRIGGERS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LAVA_TRIGGERS" EntityType="Self.LAVA_TRIGGERS" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="LAVA_USER" EntityType="Self.LAVA_USER" store:Type="Tables" store:Schema="dbo">
+    <EntitySet Name="LAVA_USERS" EntityType="Self.LAVA_USERS" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
-    [LAVA_USER].[ID] AS [ID], 
-    [LAVA_USER].[USERNAME] AS [USERNAME], 
-    [LAVA_USER].[PASSWORD] AS [PASSWORD], 
-    [LAVA_USER].[CREATEDATE] AS [CREATEDATE], 
-    [LAVA_USER].[DESCRIPTION] AS [DESCRIPTION], 
-    [LAVA_USER].[EMAILADDRESS] AS [EMAILADDRESS]
-    FROM [dbo].[LAVA_USER] AS [LAVA_USER]</DefiningQuery>
+    [LAVA_USERS].[ID] AS [ID], 
+    [LAVA_USERS].[USERNAME] AS [USERNAME], 
+    [LAVA_USERS].[PASSWORD] AS [PASSWORD], 
+    [LAVA_USERS].[CREATEDATE] AS [CREATEDATE], 
+    [LAVA_USERS].[DESCRIPTION] AS [DESCRIPTION], 
+    [LAVA_USERS].[EMAILADDRESS] AS [EMAILADDRESS]
+    FROM [dbo].[LAVA_USERS] AS [LAVA_USERS]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK_LAVA_CRON_TRIGGERS_LAVA_TRIGGERS" Association="Self.FK_LAVA_CRON_TRIGGERS_LAVA_TRIGGERS">
       <End Role="LAVA_TRIGGERS" EntitySet="LAVA_TRIGGERS" />

@@ -7,9 +7,9 @@ namespace Lava.MSSQLDB
 {
     public class UserDao : BaseDao
     {
-        public List<LAVA_USER> GetUser(UserLoginInput userInput)
+        public List<LAVA_USERS> GetUser(UserLoginInput userInput)
         {
-            return db.LAVA_USER.Where(u => u.USERNAME == userInput.UserName && u.PASSWORD == userInput.Password).ToList();
+            return db.LAVA_USERS.Where(u => u.USERNAME == userInput.UserName && u.PASSWORD == userInput.Password).ToList();
         }
     }
 }

@@ -84,7 +84,7 @@
     <Compile Include="LAVA_TRIGGERS.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="LAVA_USER.cs">
+    <Compile Include="LAVA_USERS.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model.Context.cs">

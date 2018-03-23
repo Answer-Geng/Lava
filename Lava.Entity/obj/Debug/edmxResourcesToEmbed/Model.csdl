@@ -258,9 +258,9 @@
       <End Role="LAVA_TRIGGERS" EntitySet="LAVA_TRIGGERS" />
       <End Role="LAVA_SIMPROP_TRIGGERS" EntitySet="LAVA_SIMPROP_TRIGGERS" />
     </AssociationSet>
-    <EntitySet Name="LAVA_USER" EntityType="LavaModel.LAVA_USER" />
+    <EntitySet Name="LAVA_USERS" EntityType="LavaModel.LAVA_USERS" />
   </EntityContainer>
-  <EntityType Name="LAVA_USER">
+  <EntityType Name="LAVA_USERS">
     <Key>
       <PropertyRef Name="ID" />
       <PropertyRef Name="USERNAME" />

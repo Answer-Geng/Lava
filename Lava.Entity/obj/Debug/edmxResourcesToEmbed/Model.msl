@@ -147,9 +147,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="LAVA_USER">
-      <EntityTypeMapping TypeName="LavaModel.LAVA_USER">
-        <MappingFragment StoreEntitySet="LAVA_USER">
+    <EntitySetMapping Name="LAVA_USERS">
+      <EntityTypeMapping TypeName="LavaModel.LAVA_USERS">
+        <MappingFragment StoreEntitySet="LAVA_USERS">
           <ScalarProperty Name="EMAILADDRESS" ColumnName="EMAILADDRESS" />
           <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
           <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />

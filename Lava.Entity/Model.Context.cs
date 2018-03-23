@@ -36,6 +36,6 @@ namespace Lava.Entity
         public virtual DbSet<LAVA_SIMPLE_TRIGGERS> LAVA_SIMPLE_TRIGGERS { get; set; }
         public virtual DbSet<LAVA_SIMPROP_TRIGGERS> LAVA_SIMPROP_TRIGGERS { get; set; }
         public virtual DbSet<LAVA_TRIGGERS> LAVA_TRIGGERS { get; set; }
-        public virtual DbSet<LAVA_USER> LAVA_USER { get; set; }
+        public virtual DbSet<LAVA_USERS> LAVA_USERS { get; set; }
     }
 }

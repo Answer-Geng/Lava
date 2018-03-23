@@ -1,5 +1,4 @@
 D:\SourceCode\Lava\Lava.ViewModel\bin\Debug\Lava.ViewModel.dll
 D:\SourceCode\Lava\Lava.ViewModel\bin\Debug\Lava.ViewModel.pdb
-D:\SourceCode\Lava\Lava.ViewModel\obj\Debug\Lava.ViewModel.csprojResolveAssemblyReference.cache
 D:\SourceCode\Lava\Lava.ViewModel\obj\Debug\Lava.ViewModel.dll
 D:\SourceCode\Lava\Lava.ViewModel\obj\Debug\Lava.ViewModel.pdb
