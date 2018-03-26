@@ -24,7 +24,6 @@ namespace Lava.Web
                       "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery-ajax").Include(
-                "~/Scripts/jquery-{version}.js",
                 "~/Scripts/jquery.unobtrusive-ajax.js"
                 ));
 

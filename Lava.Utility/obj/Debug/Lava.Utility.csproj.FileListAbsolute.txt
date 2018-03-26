@@ -5,3 +5,4 @@ D:\SourceCode\Lava\Lava.Utility\bin\Debug\Quartz.pdb
 D:\SourceCode\Lava\Lava.Utility\bin\Debug\Quartz.xml
 D:\SourceCode\Lava\Lava.Utility\obj\Debug\Lava.Utility.dll
 D:\SourceCode\Lava\Lava.Utility\obj\Debug\Lava.Utility.pdb
+D:\SourceCode\Lava\Lava.Utility\obj\Debug\Lava.Utility.csprojResolveAssemblyReference.cache

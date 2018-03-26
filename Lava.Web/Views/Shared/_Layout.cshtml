@@ -6,6 +6,8 @@
     <title>Lava - @ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
 </head>
 <body>
     <header class="navbar navbar-static-top">
@@ -13,7 +15,7 @@
             <div class="navbar-header">
                 <a href="#" class="navbar-brand lava-brand">LAVA</a>
             </div>
-            @if (Request.IsAuthenticated)
+            @*@if (Request.IsAuthenticated)
             {
                 <div class="navbar-collapse navbar-right">
                     <div class="btn-group">
@@ -48,7 +50,7 @@
                         </ul>
                     </div>
                 </div>
-            }
+            }*@
         </div>
     </header>
        
@@ -56,8 +58,6 @@
         @RenderBody()
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>
