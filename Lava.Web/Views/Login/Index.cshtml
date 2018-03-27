@@ -15,6 +15,14 @@
         }
     }
 
+    $(function () {
+        $("button").click(function () {
+            $(this).button('loading').delay(1000).queue(function () {
+                $(this).button('reset');
+                $(this).dequeue();
+            })
+        })
+    })
 </script>
 <div id="body-background">
     <div class="col-md-5">
@@ -32,21 +40,21 @@
                 <input type="text" class="form-control" name="username" placeholder="Username" autofocus>
             </div>
 
-                <div class="input-group">
-                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-                    <input type="password" class="form-control" name="password" placeholder="Password">
-                </div>
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                <input type="password" class="form-control" name="password" placeholder="Password">
+            </div>
 
-                <div class="input-group">
-                    <button type="submit" class="btn btn-block">Sign In</button>
-                </div>
+            <div class="input-group">
+                <button type="submit" class="btn btn-block">Sign In</button>
+            </div>
 
-                <div class="input-group">
-                    <a href="#">Forgot password?</a>
-                    <div class="pull-right">
-                        <a href="#">Sign up</a><span> for Lava</span>
-                    </div>
+            <div class="input-group">
+                <a href="#">Forgot password?</a>
+                <div class="pull-right">
+                    <a href="#">Sign up</a><span> for Lava</span>
                 </div>
+            </div>
         }
     </div>
 </div>
