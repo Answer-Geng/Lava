@@ -12,6 +12,11 @@ namespace Lava.Web.Controllers
         // GET: Login
         public ActionResult Index()
         {
+            if (Request.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
             return View();
         }
 
@@ -22,9 +27,16 @@ namespace Lava.Web.Controllers
             {
                 return Content("Login Failed! Incorrect username or password.");
             }
-            Session["user"] = userInput.UserName;
+            Session["username"] = userInput.UserName;
             FormsAuthentication.SetAuthCookie(userInput.UserName, true);
             return Content("Y");
+        }
+
+        public ActionResult LogOut()
+        {
+            Session.Abandon();
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Login");
         }
     }
 }
