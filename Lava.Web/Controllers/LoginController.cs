@@ -2,6 +2,7 @@
 using Lava.ViewModel.Login;
 using System.Threading;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace Lava.Web.Controllers
 {
@@ -22,6 +23,7 @@ namespace Lava.Web.Controllers
                 return Content("Login Failed! Incorrect username or password.");
             }
             Session["user"] = userInput.UserName;
+            FormsAuthentication.SetAuthCookie(userInput.UserName, true);
             return Content("Y");
         }
     }
