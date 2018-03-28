@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Job\CreateJobInput.cs" />
-    <Compile Include="Login\UserLoginInput.cs" />
+    <Compile Include="Account\UserLoginInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -8,4 +8,3 @@ D:\SourceCode\Lava\Lava.Entity\bin\Debug\EntityFramework.SqlServer.dll
 D:\SourceCode\Lava\Lava.Entity\bin\Debug\EntityFramework.xml
 D:\SourceCode\Lava\Lava.Entity\bin\Debug\EntityFramework.SqlServer.xml
 D:\SourceCode\Lava\Lava.Entity\bin\Debug\App.Config
-D:\SourceCode\Lava\Lava.Entity\obj\Debug\Lava.Entity.csprojResolveAssemblyReference.cache

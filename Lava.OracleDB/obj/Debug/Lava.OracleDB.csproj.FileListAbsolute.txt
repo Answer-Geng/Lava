@@ -2,4 +2,3 @@ D:\SourceCode\Lava\Lava.OracleDB\bin\Debug\Lava.OracleDB.dll
 D:\SourceCode\Lava\Lava.OracleDB\bin\Debug\Lava.OracleDB.pdb
 D:\SourceCode\Lava\Lava.OracleDB\obj\Debug\Lava.OracleDB.dll
 D:\SourceCode\Lava\Lava.OracleDB\obj\Debug\Lava.OracleDB.pdb
-D:\SourceCode\Lava\Lava.OracleDB\obj\Debug\Lava.OracleDB.csprojResolveAssemblyReference.cache

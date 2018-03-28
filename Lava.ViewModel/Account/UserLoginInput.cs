@@ -1,4 +1,4 @@
-﻿namespace Lava.ViewModel.Login
+﻿namespace Lava.ViewModel.Account
 {
     public class UserLoginInput
     {

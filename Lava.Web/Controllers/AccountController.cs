@@ -1,12 +1,12 @@
 ﻿using Lava.Business;
-using Lava.ViewModel.Login;
+using Lava.ViewModel.Account;
 using System.Threading;
 using System.Web.Mvc;
 using System.Web.Security;
 
 namespace Lava.Web.Controllers
 {
-    public class LoginController : Controller
+    public class AccountController : Controller
     {
         UserLogic userLogic = new UserLogic();
         // GET: Login
@@ -36,7 +36,7 @@ namespace Lava.Web.Controllers
         {
             Session.Abandon();
             FormsAuthentication.SignOut();
-            return RedirectToAction("Index", "Login");
+            return RedirectToAction("Index", "Account");
         }
     }
 }
