@@ -1,5 +1,6 @@
 ﻿using Lava.Utility.Command;
 using Lava.Utility.Provider;
+using Lava.ViewModel.Job;
 using Quartz;
 using System;
 
@@ -9,9 +10,9 @@ namespace Lava.Business
     {
         private IScheduler scheduler = new RemoteSchedulerProvider().Scheduler;
 
-        public void AddJob()
+        public void AddJob(CreateJobInput job)
         {
-          
+           
         }
         public void DeleteJob(string name,string group)
         {

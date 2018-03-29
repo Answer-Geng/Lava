@@ -68,3 +68,4 @@ D:\SourceCode\Lava\Lava.Web\bin\Lava.Entity.pdb
 D:\SourceCode\Lava\Lava.Web\bin\EntityFramework.xml
 D:\SourceCode\Lava\Lava.Web\bin\EntityFramework.SqlServer.dll
 D:\SourceCode\Lava\Lava.Web\bin\EntityFramework.SqlServer.xml
+D:\SourceCode\Lava\Lava.Web\bin\App.Config
