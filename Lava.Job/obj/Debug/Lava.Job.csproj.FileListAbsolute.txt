@@ -11,4 +11,3 @@ D:\SourceCode\Lava\Lava.Job\bin\Debug\Quartz.pdb
 D:\SourceCode\Lava\Lava.Job\bin\Debug\Quartz.xml
 D:\SourceCode\Lava\Lava.Job\obj\Debug\Lava.Job.dll
 D:\SourceCode\Lava\Lava.Job\obj\Debug\Lava.Job.pdb
-D:\SourceCode\Lava\Lava.Job\obj\Debug\Lava.Job.csprojResolveAssemblyReference.cache

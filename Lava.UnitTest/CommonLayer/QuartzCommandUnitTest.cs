@@ -6,6 +6,12 @@ using Quartz;
 using Quartz.Impl;
 using Lava.Job;
 using Lava.Utility.Provider;
+using Quartz.Impl.AdoJobStore;
+using System.Data.SqlClient;
+using Common.Logging;
+using Quartz.Impl.AdoJobStore.Common;
+using Quartz.Simpl;
+using System.Data.Common;
 
 namespace Lava.UnitTest.CommonLayer
 {
@@ -60,5 +66,38 @@ namespace Lava.UnitTest.CommonLayer
             QuartzAddJobCommand addCommand = new QuartzAddJobCommand(scheduler, job, trigger);
             addCommand.Execute();
         }
+
+        [TestMethod]
+        public void QuartzSelectCommand()
+        {
+            var args = new DelegateInitializationArgs();
+            args.Logger = LogManager.GetLogger(GetType());
+            args.TablePrefix = "LAVA_";
+            args.InstanceName = "Lava";
+            args.InstanceId = "AUTO";
+            args.DbProvider = new DbProvider("SqlServer-20", "Data Source=.;Initial Catalog=Lava;User ID=sa;Password=123");
+            args.TypeLoadHelper = new SimpleTypeLoadHelper();
+            args.ObjectSerializer = new DefaultObjectSerializer();
+
+            StdAdoDelegate adoDelegate = new StdAdoDelegate();
+            adoDelegate.Initialize(args);
+            using (SqlConnection conn = new SqlConnection("Data Source=.;Initial Catalog=Lava;User ID=sa;Password=123"))
+            {
+                conn.Open();
+                SqlTransaction tran = conn.BeginTransaction();
+                try
+                {
+                    ConnectionAndTransactionHolder holder = new ConnectionAndTransactionHolder(conn, tran);
+                    var num = adoDelegate.SelectNumJobs(holder);
+                    tran.Commit();
+                }
+                catch (Exception ex)
+                {
+                    tran.Rollback();
+                }
+               
+            }
+        }
     }
 }
+

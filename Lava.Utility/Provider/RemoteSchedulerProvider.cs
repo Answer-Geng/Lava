@@ -39,7 +39,7 @@ namespace Lava.Utility.Provider
             {
                 ["quartz.scheduler.instanceName"] = "RemoteClient",
                 ["quartz.scheduler.proxy"] = "true",
-                ["quartz.scheduler.proxy.address"] = ProxyAddress == "" ? "tcp://127.0.0.1:555/QuartzScheduler" : ProxyAddress
+                ["quartz.scheduler.proxy.address"] = "tcp://127.0.0.1:555/QuartzScheduler"
             };
             return properties;
         }

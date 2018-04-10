@@ -20,28 +20,12 @@
                 <div class="navbar-collapse navbar-right">
                     <div class="btn-group">
                         <button type="button" class="btn btn-default dropdown-toggle lava-navbar-right" data-toggle="dropdown">
-                            <span class="glyphicon glyphicon-plus"></span>
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>
-                                <a href="#">New Job </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#">New Scheduler</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-default dropdown-toggle lava-navbar-right" data-toggle="dropdown">
                             <span class="glyphicon glyphicon-user"></span>
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                <a href="#">Signed in as </a>
+                                <a>Signed in as <strong>@Session["username"]</strong></a>
                             </li>
                             <li class="divider"></li>
                             <li>
