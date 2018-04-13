@@ -6,10 +6,47 @@
     <header>Scheduler Management</header>
 </div>
 
-<div>
-    
+<div class="container" id="scheduler-body">
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>SCHEDULER NAME</th>
+                    <th>LAST_CHECKIN_TIME</th>
+                    <th>TOTALJOBS</th>
+                    <th>CHECKIN_INTERNAL</th>
+                    <th>OPTIONS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Lava</th>
+                    <th>636589436985131396</th>
+                    <th>1</th>
+                    <th>7500</th>
+                    <th>
+                        <a href="#" data-toggle="tooltip" title="Start">
+                            <span class="glyphicon glyphicon-play"></span>
+                        </a>
+                        <a href="#" data-toggle="tooltip" title="Stop">
+                            <span class="glyphicon glyphicon-stop"></span>
+                        </a>
+                        <a href="#" data-toggle="tooltip" title="Refresh">
+                            <span class="glyphicon glyphicon-refresh"></span>
+                        </a>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="well">
+
+    </div>
+
+
 </div>
 
-<div>
-
-</div>
+<script>
+    $(function () { $("[data-toggle='tooltip']").tooltip(); });
+</script>
