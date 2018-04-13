@@ -45,6 +45,7 @@ textarea {
 .lava-navbar-right {
     margin-top: 11px;
     border: none;
+    float:right;
 }
 
 .lava-login-panel{
@@ -111,4 +112,8 @@ textarea {
     color:black;
     text-decoration:none;
     margin-right:5px;
+}
+
+#scheduler-body tbody > tr > th{
+    font-size :12px;
 }
