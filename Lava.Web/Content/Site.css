@@ -108,7 +108,7 @@ textarea {
     width : 1200px;
 }
 
-#scheduler-body a{
+#scheduler-body table  a{
     color:black;
     text-decoration:none;
     margin-right:5px;

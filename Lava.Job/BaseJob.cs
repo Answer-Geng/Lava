@@ -3,10 +3,9 @@ using Quartz;
 
 namespace Lava.Job
 {
-    public abstract class AbstractJob : IJob
+    public abstract class BaseJob : IJob
     {
-        protected readonly static ILog log = LogManager.GetLogger(typeof(AbstractJob));
+        protected readonly static ILog log = LogManager.GetLogger(typeof(BaseJob));
         public abstract void Execute(IJobExecutionContext context);
-        
     }
 }

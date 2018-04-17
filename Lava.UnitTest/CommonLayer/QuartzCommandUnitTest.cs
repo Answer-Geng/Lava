@@ -62,9 +62,10 @@ namespace Lava.UnitTest.CommonLayer
                 .StartNow()
                 .WithSimpleSchedule(x => x.RepeatForever().WithInterval(TimeSpan.FromSeconds(2)))
                 .Build();
-
+            
             QuartzAddJobCommand addCommand = new QuartzAddJobCommand(scheduler, job, trigger);
             addCommand.Execute();
+           
         }
 
         [TestMethod]

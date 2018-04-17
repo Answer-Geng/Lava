@@ -2,11 +2,11 @@
 
 namespace Lava.Job
 {
-    public class HelloJob : BaseJob
+    public class HelloJob2 : BaseJob
     {
         public override void Execute(IJobExecutionContext context)
         {
-            log.Info("-------------------HelloJob-------------------");
+            log.Info("-------------------HelloJob2-------------------");
         }
     }
 }
