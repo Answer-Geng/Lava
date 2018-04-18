@@ -7,6 +7,7 @@
 </div>
 
 <div class="container" id="scheduler-body">
+
     <div class="row">
         <table class="table">
             <thead>
@@ -41,6 +42,20 @@
     </div>
 
     <div class="well">
+        <div class="input-group" id="toolbar">
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-default dropdown-toggle" style="width:75px;" data-toggle="dropdown">
+                    JOB
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">JOB</a></li>
+                    <li><a href="#">TRIGGER</a></li>
+                </ul>
+            </div>
+            <input type="text" class="form-control" placeholder="Search...">
+        </div>
+
         <table class="table table-condensed">
             <thead>
                 <tr>
@@ -128,51 +143,6 @@
                         </a>
                     </th>
                 </tr>
-                <tr>
-                    <th>lava_job_006</th>
-                    <th>lava_trigger_006</th>
-                    <th>ACQUIRED</th>
-                    <th>2018/04/13 08:00:00</th>
-                    <th>2018/04/14 08:00:00</th>
-                    <th>
-                        <a href="#" data-toggle="tooltip" title="Start">
-                            <span class="glyphicon glyphicon-play"></span>
-                        </a>
-                        <a href="#" data-toggle="tooltip" title="Stop">
-                            <span class="glyphicon glyphicon-stop"></span>
-                        </a>
-                    </th>
-                </tr>
-                <tr>
-                    <th>lava_job_007</th>
-                    <th>lava_trigger_007</th>
-                    <th>ACQUIRED</th>
-                    <th>2018/04/13 08:00:00</th>
-                    <th>2018/04/14 08:00:00</th>
-                    <th>
-                        <a href="#" data-toggle="tooltip" title="Start">
-                            <span class="glyphicon glyphicon-play"></span>
-                        </a>
-                        <a href="#" data-toggle="tooltip" title="Stop">
-                            <span class="glyphicon glyphicon-stop"></span>
-                        </a>
-                    </th>
-                </tr>
-                <tr>
-                    <th>lava_job_008</th>
-                    <th>lava_trigger_008</th>
-                    <th>ACQUIRED</th>
-                    <th>2018/04/13 08:00:00</th>
-                    <th>2018/04/14 08:00:00</th>
-                    <th>
-                        <a href="#" data-toggle="tooltip" title="Start">
-                            <span class="glyphicon glyphicon-play"></span>
-                        </a>
-                        <a href="#" data-toggle="tooltip" title="Stop">
-                            <span class="glyphicon glyphicon-stop"></span>
-                        </a>
-                    </th>
-                </tr>
             </tbody>
         </table>
 
@@ -191,3 +161,5 @@
 <script>
     $(function () { $("[data-toggle='tooltip']").tooltip(); });
 </script>
+
+
